@@ -93,3 +93,24 @@ section.filters button:hover {
     margin-left: 50px;
     margin-bottom: 10px;
 }
+
+/*              Mobile              */
+@media screen and (min-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
+}
+
+/*              Tabs              */
+@media screen and (min-width: 992px) {
+    .filters {
+        flex-direction: row;
+    }
+}
+
+/*              Large screens              */
+@media screen and (max-width: 1200px) {
+    .filters {
+        flex-direction: row;
+    }
+}
