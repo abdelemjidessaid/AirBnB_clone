@@ -5,7 +5,9 @@
     border: 1px solid #dddddd;
     border-radius: 4px;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
 }
 
 section.filters > button {
@@ -18,7 +20,6 @@ section.filters > button {
     width: 20%;
     margin-right: 30px;
     margin-left: auto;
-    opacity: 1;
 }
 
 section.filters button:hover {
@@ -96,21 +97,76 @@ section.filters button:hover {
 
 /*              Mobile              */
 @media screen and (min-width: 768px) {
-    .filters {
-        flex-direction: column;
+    section.filters {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+
+    section.filters .popover {
+        display: block;
+    }
+
+    section.filters button {
+        width: 100%;
+        align-self: flex-end;
+        margin: auto;
+    }
+
+    .locations,
+    .amenities {
+        height: 100%;
+        width: 50%;
+        box-sizing: border-box;
     }
 }
 
 /*              Tabs              */
 @media screen and (min-width: 992px) {
-    .filters {
+    section.filters {
         flex-direction: row;
+    }
+
+    section.filters .popover {
+        display: none;
+    }
+
+    section.filters button {
+        width: 20%;
+        margin-right: 30px;
+        margin-left: auto;
+        align-items: center;
+    }
+
+    .locations,
+    .amenities {
+        height: 100%;
+        width: 25%;
+        padding-left: 30px;
     }
 }
 
 /*              Large screens              */
-@media screen and (max-width: 1200px) {
-    .filters {
+@media screen and (min-width: 1200px) {
+    section.filters {
         flex-direction: row;
+    }
+
+    section.filters .popover {
+        display: none;
+    }
+
+    section.filters button {
+        width: 20%;
+        margin-right: 30px;
+        margin-left: auto;
+        align-items: center;
+    }
+
+    .locations,
+    .amenities {
+        height: 100%;
+        width: 25%;
+        padding-left: 30px;
     }
 }

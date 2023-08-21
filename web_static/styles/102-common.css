@@ -21,20 +21,20 @@ body {
 /*              Mobile              */
 @media screen and (min-width: 768px) {
     .container {
-        width: 750px;
+        max-width: 750px;
     }
 }
 
 /*              Tabs              */
-@media screen and (min-width: 992) {
+@media screen and (min-width: 992px) {
     .container {
-        width: 970px;
+        max-width: 970px;
     }
 }
 
 /*              Large screens              */
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
     .container {
-        width: 1170px;
+        max-width: 1170px;
     }
 }
